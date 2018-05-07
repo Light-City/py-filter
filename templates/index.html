@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello {{ l.1 }}</h1>
+<h1>hello {{ l.2 }}</h1>
+<h1>hello {{ d.name }}</h1>
+<h1>hello {{ d.age }}</h1>
+<h1>hello {{ d.sex }}</h1>
+<h1>hello {{ c.name }}</h1>
+<h1>hello {{ c.sex }}</h1>
+
+<h1>{{ d.name }}的真实年龄:{{ d.age|add:12 }}</h1>
+<h1>hello {{ test|capfirst }}</h1>
+<h1>{{ test1 }}</h1> <!-- helo kitty-->
+<h1>{{ test1|cut:' ' }}</h1> <!-- 去除空格 helokitty-->
+<h1>{{ t }}</h1>
+<h1>{{ t|date:'Y-m-d' }}</h1>
+<h1>{{ e }}</h1>
+<h1>{{ e|default:'空列表' }}</h1> <!-- 若e为空列表，则过滤default用后面值来代替 -->
+<h1>{{ e|default_if_none:'空列表' }}</h1> <!-- 若e不为空列表，则过滤default用后面值来代替 -->
+<h1>{{ a }}</h1>
+<h1>{{ a|safe }}</h1>
+
+{% autoescape off %}
+<h1>{{ a }}</h1>
+{% endautoescape %}
+
+</body>
+</html>
