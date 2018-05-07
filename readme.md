@@ -46,7 +46,7 @@ def query(request):
 
 >index.html
 
-```python
+```html
 <h1>hello {{ l.1 }}</h1>
 <h1>hello {{ l.2 }}</h1>
 <h1>hello {{ d.name }}</h1>
